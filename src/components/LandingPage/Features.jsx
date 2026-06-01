@@ -37,15 +37,15 @@ export default function Features() {
   ];
 
   return (
-    <div className="bg-black py-24" id="features">
+    <div className="bg-white py-24 select-none" id="features">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-lime-400 text-xs font-mono font-bold tracking-widest uppercase mb-3 block">Platform</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <span className="text-[#ef4444] text-[10px] font-bold tracking-widest uppercase mb-3 block">Platform</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-950 mb-4">
             An AI operating system for tech creators.
           </h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="text-zinc-500 text-base max-w-2xl mx-auto font-medium">
             Every module a creator needs — from discovery to publish — composed into one focused workspace.
           </p>
         </div>
@@ -55,24 +55,23 @@ export default function Features() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className={`bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 relative overflow-hidden group hover:border-zinc-700 transition-colors ${
-                index === 4 ? 'bg-zinc-900/80 border-lime-500/20' : ''
+              className={`bg-white border border-zinc-200/80 rounded-2xl p-6 relative overflow-hidden group hover:border-[#ef4444]/60 transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.01)] hover:shadow-md ${
+                index === 4 ? 'bg-red-50/5 border-red-200/60 hover:border-[#ef4444]' : ''
               }`}
             >
               {feature.hasArrow && (
-                <ArrowUpRight className="absolute top-4 right-4 w-5 h-5 text-zinc-500 group-hover:text-white transition-colors" />
+                <ArrowUpRight className="absolute top-4 right-4 w-5 h-5 text-zinc-400 group-hover:text-[#ef4444] transition-colors" />
               )}
               
-              <div className="w-10 h-10 bg-zinc-800 border border-zinc-700 rounded-lg flex items-center justify-center mb-4 text-lime-400 group-hover:bg-lime-400 group-hover:text-black transition-colors">
-                <feature.icon className="w-5 h-5" />
+              <div className="w-10 h-10 bg-zinc-50 border border-zinc-150 rounded-lg flex items-center justify-center mb-4 text-[#ef4444] group-hover:bg-[#ef4444] group-hover:text-white transition-colors">
+                <feature.icon className="w-5 h-5 stroke-[2]" />
               </div>
               
-              <h3 className="text-white font-semibold text-lg mb-2">{feature.title}</h3>
-              <p className="text-zinc-400 text-sm leading-relaxed">{feature.description}</p>
+              <h3 className="text-zinc-950 font-bold text-lg mb-2">{feature.title}</h3>
+              <p className="text-zinc-500 text-sm leading-relaxed font-medium">{feature.description}</p>
               
-              {/* Special style for index 3 (Repurposing Engine) to add that big text if needed, or I can just leave it clean */}
               {index === 3 && (
-                <div className="absolute -bottom-6 -left-6 text-zinc-800/10 text-7xl font-bold select-none pointer-events-none">
+                <div className="absolute -bottom-6 -left-6 text-zinc-200/20 text-7xl font-black select-none pointer-events-none font-mono">
                   FROM
                 </div>
               )}

@@ -36,15 +36,15 @@ export default function PlatformSection() {
   ];
 
   return (
-    <div className="bg-black py-24" id="platforms">
+    <div className="bg-white py-24 select-none" id="platforms">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-lime-400 text-xs font-mono font-bold tracking-widest uppercase mb-3 block">Multi-Platform</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+          <span className="text-[#ef4444] text-[10px] font-bold tracking-widest uppercase mb-3 block">Multi-Platform</span>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-zinc-950 mb-4">
             One trend. Every platform. Native voice.
           </h2>
-          <p className="text-zinc-400 text-lg max-w-2xl mx-auto">
+          <p className="text-zinc-500 text-base max-w-2xl mx-auto font-medium">
             Generate content tuned to each platform&apos;s format, length, tone and audience.
           </p>
         </div>
@@ -54,20 +54,20 @@ export default function PlatformSection() {
           {platforms.map((platform, index) => (
             <div 
               key={index} 
-              className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 hover:border-zinc-700 transition-colors group"
+              className="bg-white border border-zinc-200/80 rounded-2xl p-6 hover:border-[#ef4444]/60 transition-all duration-300 shadow-[0_2px_8px_rgba(0,0,0,0.01)] hover:shadow-md group"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-zinc-800 border border-zinc-700 rounded-lg flex items-center justify-center text-zinc-400 group-hover:text-lime-400 transition-colors">
-                  <platform.icon className="w-5 h-5" />
+                <div className="w-10 h-10 bg-zinc-50 border border-zinc-150 rounded-lg flex items-center justify-center text-zinc-400 group-hover:text-[#ef4444] transition-colors">
+                  <platform.icon className="w-5 h-5 stroke-[2]" />
                 </div>
-                <h3 className="text-white font-semibold text-lg">{platform.name}</h3>
+                <h3 className="text-zinc-950 font-bold text-lg">{platform.name}</h3>
               </div>
               
               <ul className="space-y-3">
                 {platform.features.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-lime-500 flex-shrink-0" />
-                    <span className="text-zinc-400 text-sm">{feature}</span>
+                    <Check className="w-4 h-4 text-emerald-500 flex-shrink-0 stroke-[3]" />
+                    <span className="text-zinc-500 text-sm font-semibold">{feature}</span>
                   </li>
                 ))}
               </ul>
